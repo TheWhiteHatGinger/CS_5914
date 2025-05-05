@@ -22,9 +22,9 @@ def benchmark_solver(n, method='smoothed_aggregation'):
 
     # 2) Construct the AMG hierarchy (via our custom methods)
     if method == 'smoothed_aggregation':
-        ml = my_amg.SmoothedAggregationSolver.smoothed_aggregation_solver(A)
+        ml = LLM_Initial.SmoothedAggregationSolver.smoothed_aggregation_solver(A)
     elif method == 'ruge_stuben':
-        ml = my_amg.ruge_stuben_solver(A)
+        ml = LLM_Initial.ruge_stuben_solver(A)
     else:
         raise ValueError(f"Unknown method: {method}")
 
@@ -45,9 +45,9 @@ def benchmark_solver_memory(n, method='smoothed_aggregation'):
         A = poisson((n, n), format='csr')
         b = np.ones(A.shape[0], dtype=float)
         if method == 'smoothed_aggregation':
-            ml = my_amg.SmoothedAggregationSolver.smoothed_aggregation_solver(A)
+            ml = LLM_Initial.SmoothedAggregationSolver.smoothed_aggregation_solver(A)
         elif method == 'ruge_stuben':
-            ml = my_amg.ruge_stuben_solver(A)
+            ml = LLM_Initial.ruge_stuben_solver(A)
         else:
             raise ValueError(f"Unknown method: {method}")
         # Solve
@@ -67,9 +67,9 @@ def benchmark_solver_flops(n, method='smoothed_aggregation'):
     b = np.ones(A.shape[0], dtype=float)
     
     if method == 'smoothed_aggregation':
-        ml = my_amg.SmoothedAggregationSolver.smoothed_aggregation_solver(A)
+        ml = LLM_Initial.SmoothedAggregationSolver.smoothed_aggregation_solver(A)
     elif method == 'ruge_stuben':
-        ml = my_amg.ruge_stuben_solver(A)
+        ml = LLM_Initial.ruge_stuben_solver(A)
     else:
         raise ValueError(f"Unknown method: {method}")
     
@@ -88,9 +88,9 @@ def benchmark_solver_convergence(n, method='smoothed_aggregation'):
     b = np.ones(A.shape[0], dtype=float)
     
     if method == 'smoothed_aggregation':
-        ml = my_amg.SmoothedAggregationSolver.smoothed_aggregation_solver(A)
+        ml = LLM_Initial.SmoothedAggregationSolver.smoothed_aggregation_solver(A)
     elif method == 'ruge_stuben':
-        ml = my_amg.ruge_stuben_solver(A)
+        ml = LLM_Initial.ruge_stuben_solver(A)
     else:
         raise ValueError(f"Unknown method: {method}")
     
