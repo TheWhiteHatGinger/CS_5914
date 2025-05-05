@@ -64,8 +64,8 @@ To run the code in this repository, you need Python 3.12, PyAMG, SciPy, NumPy, P
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/<your-username>/amg-solver-optimization.git
-   cd amg-solver-optimization
+   git clone https://github.com/TheWhiteHatGinger/CS_5914.git
+   cd CS_5914
    ```
 
 2. **Set up a virtual environment** (recommended):
@@ -147,10 +147,8 @@ Each benchmarking script generates performance metrics (execution time, memory u
 ## Acknowledgments
 - This project was developed as part of the CS 5914 course.
 - Special thanks to the PyAMG developers and the authors of the referenced paper for their foundational work.
-- LLM optimizations were performed using OpenAI's O1 Pro model and Grok 3 by xAI.
+- LLM optimizations were performed using OpenAI's O1 Pro model and Grok 3 by xAI (as was this README).
 
 ## License
 This project is licensed under the MIT License. See the `LICENSE` file for details.
 
-## Contact
-For questions or issues, please open an issue on this GitHub repository or contact the project maintainers.
